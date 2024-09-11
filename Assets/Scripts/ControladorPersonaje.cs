@@ -12,6 +12,8 @@ public class ControladorPersonaje : MonoBehaviour
     public LayerMask mascaraSuelo;
     private bool dobleSalto = false;
     private Animator animator;
+    private bool corriendo = false;
+    public float velocidad = 1f;
 
     void Awake()
     {
@@ -26,6 +28,11 @@ public class ControladorPersonaje : MonoBehaviour
     }
     void FixedUpdate()
     {
+        if (corriendo)
+        {
+            rb.velocity = new Vector2(velocidad, rb.velocity.y);
+        }
+        animator.SetFloat("VelX", rb.velocity.x);
         enSuelo = Physics2D.OverlapCircle(comprobadorSuelo.position, comprobadorRadio, mascaraSuelo);
         animator.SetBool("isGrounded", enSuelo);
         if(enSuelo)
@@ -37,14 +44,25 @@ public class ControladorPersonaje : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ((enSuelo || !dobleSalto) && Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0))
         {
-            rb.velocity = new Vector2(rb.velocity.x, fuerzaSalto);
-            // Aplica la fuerza al Rigidbody2D del objeto
-            // rb.AddForce(new Vector2(0, fuerzaSalto));
-            if(!dobleSalto && !enSuelo)
+            if (corriendo)
             {
-                dobleSalto = true;
+                // Hacemos que salte si puede saltar
+                if (enSuelo || !dobleSalto)
+                {
+                    rb.velocity = new Vector2(rb.velocity.x, fuerzaSalto);
+                    // Aplica la fuerza al Rigidbody2D del objeto
+                    // rb.AddForce(new Vector2(0, fuerzaSalto));
+                    if (!dobleSalto && !enSuelo)
+                    {
+                        dobleSalto = true;
+                    }
+                }
+            }
+            else
+            {
+                corriendo = true;
             }
         }
     }
