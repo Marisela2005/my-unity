@@ -473,7 +473,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 2962612020517210741}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 0c5dda43317859e459cb53793cf3c116, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -834,8 +834,8 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 2
-  m_Material: {fileID: 0}
+  m_GravityScale: 3
+  m_Material: {fileID: 6200000, guid: 0c5dda43317859e459cb53793cf3c116, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -879,11 +879,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 802a8bb451dcc6a49ae79ac66a8cbca9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fuerzaSalto: 600
+  fuerzaSalto: 16
   comprobadorSuelo: {fileID: 6251198826172719035}
   mascaraSuelo:
     serializedVersion: 2
     m_Bits: 256
+  velocidad: 8
 --- !u!1 &7677388237306162421
 GameObject:
   m_ObjectHideFlags: 0
@@ -1185,7 +1186,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 8086664319401544644}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 0c5dda43317859e459cb53793cf3c116, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
