@@ -11,13 +11,17 @@ public class Generador : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        NotificationCenter.DefaultCenter().AddObserver(this, "PersonajeEmpiezaACorrer");
+    }
+
+    void PersonajeEmpiezaACorrer(Notification notification)
+    {
         Generar();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
     }
 
     void Generar()
