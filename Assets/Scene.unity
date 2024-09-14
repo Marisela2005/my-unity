@@ -324,6 +324,7 @@ GameObject:
   - component: {fileID: 1017342787}
   - component: {fileID: 1017342786}
   - component: {fileID: 1017342789}
+  - component: {fileID: 1017342790}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -424,6 +425,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   personaje: {fileID: 991485026}
   separacion: 6
+--- !u!114 &1017342790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1017342785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11bce84d7f544be4b83de6ee1118f81f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1037238146
 GameObject:
   m_ObjectHideFlags: 0
@@ -651,7 +664,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: BloqueLargo
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3493228462250125940, guid: bab877ec9d87fd44cb6c2283e51d5fbc, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -712,30 +726,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6781971748348087964, guid: 44902a6049595f34eb1a1f8f05256299, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 6200000, guid: 0c5dda43317859e459cb53793cf3c116, type: 2}
-    - target: {fileID: 6781971748348087964, guid: 44902a6049595f34eb1a1f8f05256299, type: 3}
-      propertyPath: m_GravityScale
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6944205753196920957, guid: 44902a6049595f34eb1a1f8f05256299, type: 3}
-      propertyPath: velocidad
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 6944205753196920957, guid: 44902a6049595f34eb1a1f8f05256299, type: 3}
-      propertyPath: fuerzaSalto
-      value: 16
-      objectReference: {fileID: 0}
     - target: {fileID: 7399081053471271216, guid: 44902a6049595f34eb1a1f8f05256299, type: 3}
       propertyPath: m_Name
       value: Personaje
       objectReference: {fileID: 0}
-    - target: {fileID: 7759924450510161319, guid: 44902a6049595f34eb1a1f8f05256299, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 6200000, guid: 0c5dda43317859e459cb53793cf3c116, type: 2}
+    - target: {fileID: 7399081053471271216, guid: 44902a6049595f34eb1a1f8f05256299, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 8086664319401544644, guid: 44902a6049595f34eb1a1f8f05256299, type: 3}
       propertyPath: m_TagString
       value: Player
@@ -744,10 +742,6 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 9137557015043521319, guid: 44902a6049595f34eb1a1f8f05256299, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 6200000, guid: 0c5dda43317859e459cb53793cf3c116, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

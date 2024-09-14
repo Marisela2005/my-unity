@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7587356425383089468}
   - component: {fileID: 4780593585271948228}
   - component: {fileID: -8206551330027493160}
+  - component: {fileID: -4007623645577340833}
   m_Layer: 8
   m_Name: BloqueMediano
   m_TagString: Untagged
@@ -130,3 +131,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.47, y: 0.67}
   m_EdgeRadius: 0
+--- !u!114 &-4007623645577340833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8507950077681922400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4edae92a08b85af4ca4d0b50226aba00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  puntosGanados: 1
