@@ -20,7 +20,10 @@ public class Item : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collider)
     {
-        NotificationCenter.DefaultCenter().PostNotification(this, "IncrementarPuntos", puntosGanados);
+        if(collider.tag == "Player")
+        {
+            NotificationCenter.DefaultCenter().PostNotification(this, "IncrementarPuntos", puntosGanados);
+        }
         Destroy(gameObject);
     }
 }
