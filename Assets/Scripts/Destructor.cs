@@ -20,8 +20,9 @@ public class Destructor : MonoBehaviour
     {
         if(other.tag == "Player")
         {
-            Debug.Break();
-            // Ha muerto el personaje
+            NotificationCenter.DefaultCenter().PostNotification(this, "PersonajeHaMuerto");
+            GameObject personaje = GameObject.Find("Personaje");
+            personaje.SetActive(false);
         } else
         {
             Destroy(other.gameObject);
