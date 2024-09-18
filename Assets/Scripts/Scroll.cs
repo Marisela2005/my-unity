@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Scroll : MonoBehaviour
 {
+    public bool InicarEnMovimiento = false;
     public float velocidad = 0f;
     private bool enMovimiento = false;
     private float tiempoInicio = 0f;
@@ -13,6 +14,10 @@ public class Scroll : MonoBehaviour
     {
         NotificationCenter.DefaultCenter().AddObserver(this, "PersonajeEmpiezaACorrer");
         NotificationCenter.DefaultCenter().AddObserver(this, "PersonajeHaMuerto");
+        if(InicarEnMovimiento)
+        {
+            PersonajeEmpiezaACorrer();
+        }
     }
 
     void PersonajeHaMuerto()

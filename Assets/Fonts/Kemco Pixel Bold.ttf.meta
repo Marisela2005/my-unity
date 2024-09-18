@@ -3,15 +3,15 @@ guid: cc7a9c82b15b1a44abf87f597d6962c5
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
-  fontSize: 60
-  forceTextureCase: 3
+  fontSize: 65
+  forceTextureCase: 1
   characterSpacing: 0
   characterPadding: 1
   includeFontData: 1
   fontNames:
   - Kemco Pixel
   fallbackFontReferences: []
-  customCharacters: 1234567890
+  customCharacters: 
   fontRenderingMode: 2
   ascentCalculationMode: 1
   useLegacyBoundsCalculation: 0
