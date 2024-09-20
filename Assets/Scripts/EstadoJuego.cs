@@ -1,14 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.IO;
 
 public class EstadoJuego : MonoBehaviour
 {
     public int puntuacionMaxima = 0;
     public static EstadoJuego estadoJuego;
+    private String rutaArchivo;
 
     void Awake()
     {
+        rutaArchivo = Application.persistentDataPath + "/datos.dat";
         if(estadoJuego == null)
         {
             estadoJuego = this;
@@ -22,7 +27,7 @@ public class EstadoJuego : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Cargar();
     }
 
     // Update is called once per frame
@@ -30,4 +35,36 @@ public class EstadoJuego : MonoBehaviour
     {
         
     }
+
+    public void Guardar()
+    {
+        BinaryFormatter bf = new BinaryFormatter();
+        FileStream file = File.Create(rutaArchivo);
+        DatosAGuardar datos = new DatosAGuardar();
+        datos.puntuacionMaxima = puntuacionMaxima;
+        bf.Serialize(file, datos);
+        file.Close();
+    }
+
+    void Cargar()
+    {
+        if(File.Exists(rutaArchivo))
+        {
+            BinaryFormatter bf = new BinaryFormatter();
+            FileStream file = File.Open(rutaArchivo, FileMode.Open);
+            DatosAGuardar datos = (DatosAGuardar)bf.Deserialize(file);
+            puntuacionMaxima = datos.puntuacionMaxima;
+            file.Close();
+        }
+        else 
+        {
+            puntuacionMaxima = 0;
+        }
+    }
+}
+
+[Serializable]
+class DatosAGuardar
+{
+    public int puntuacionMaxima;
 }
