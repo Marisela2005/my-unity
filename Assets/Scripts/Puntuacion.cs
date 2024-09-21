@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Puntuacion : MonoBehaviour
 {
-    private int puntuacion = 0;
+    public int puntuacion = 0;
     public TextMesh marcador;
 
     // Start is called before the first frame update
