@@ -156,3 +156,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puntosGanados: 5
+  itemSoundClip: {fileID: 8300000, guid: 6e70a7a7d415b50428a2d67079ca46a8, type: 3}
