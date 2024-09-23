@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class BotonJugar : MonoBehaviour
+public class BotonCargarEscena : MonoBehaviour
 {
+    public string nombreEscenaParaCarga = "GameScene";
     private AudioSource audioSource;
 
     // Start is called before the first frame update
@@ -33,6 +34,6 @@ public class BotonJugar : MonoBehaviour
     }
     void CargarNivelJuego()
     {
-        SceneManager.LoadScene("GameScene");
+        SceneManager.LoadScene(nombreEscenaParaCarga);
     }
 }
